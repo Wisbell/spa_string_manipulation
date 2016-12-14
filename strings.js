@@ -1,4 +1,7 @@
 
+var testString = "";
+
+
 function reversal(string) {
 
     var reversed = []
@@ -32,33 +35,23 @@ function alphabits(string) {
 }
 
 
-/*
-Implement the logic in the palindrome function that determine whether the
-string is a palindrome. If it is, display the text "Your string is a palidrome" in the DOM, below the text input.
-*/
 function palindrome(string) {
-    console.log("palindrome function string", string)
 
+    // check string to the reversed string
     if(string === string.split('').reverse().join('')) {
         document.querySelector('.palindrome').innerText = "Your string is a palindrome"
     } else {
         document.querySelector('.palindrome').innerHTML = `Your string is <b>NOT</b> a palindrome`
     }
-
 }
 
 
-var testString = "";
-// reversal(testString);
-// alphabits(testString);
-// palindrome(testString);
-
-
 function main(string){
-    console.log("main function called")
 
     // clear the console and call the functions
     console.clear()
+
+    console.log("main function called")
 
     reversal(string)
     alphabits(string)
