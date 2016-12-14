@@ -1,12 +1,12 @@
-function reversal() {
+function reversal(string) {
 
 }
 
-function alphabits() {
+function alphabits(string) {
 
 }
 
-function palindrome() {
+function palindrome(string) {
 
 }
 
@@ -16,15 +16,22 @@ alphabits(testString);
 palindrome(testString);
 
 
+function main(string){
+    console.log("main function called")
 
-function checkInputAllAlpha () {
+    reversal(string)
+    alphabits(string)
+    palindrome(string)
+}
+
+
+function checkInputAllAlpha (string) {
 
     var regexExp = /[A-Za-z]/g
 
-    console.log("blank", document.querySelector('input[name="stringHere"]').value.replace(regexExp, ''))
-
-    if (document.querySelector('input[name="stringHere"]').value.replace(regexExp, '') === "") {
-        console.log("what")
+    if (string.replace(regexExp, '') === "") {
+        console.log("All Alpha")
+        return true;
     }
 }
 
@@ -33,10 +40,17 @@ function applyEventListeners() {
 
     document.querySelector('.what').addEventListener('click', function(event) {
         event.preventDefault()
-        console.log("What button clicked")
+        console.log("button clicked")
 
-        // Check if input contains only letters
-        checkInputAllAlpha()
+        // Get input value
+        var inputString = document.querySelector('input[name="stringHere"]').value
+
+        // Check if input contains only letters and run all functions if true
+        if(checkInputAllAlpha(inputString)){
+            main(inputString)
+        } else {
+            alert("Input value contains non-alphanumeric characters.  The input only accepts alphabetical characters")
+        }
     })
 }
 
