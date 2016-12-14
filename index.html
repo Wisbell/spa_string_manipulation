@@ -5,14 +5,23 @@
     <title>String Manipulation - SPA</title>
 </head>
 <body>
-    <div>
+    <div class="main">
         <form>
             <fieldset>
                 <legend>String Manipulation App</legend>
-                <input type="text" name="stringHere">
+                <!-- couldn't use pattern  -->
+                <input type="text" name="stringHere" pattern="[A-Za-z]+">
                 <button class="what">What?</button>
             </fieldset>
         </form>
+
+        <div class="displayInfo">
+            <h1>Outputs</h1>
+            <h3>Reversal: </h3>
+            <h3>Alphabits: </h3>
+            <h3>Palindrome:</h3>
+        </div>
+
     </div>
     <script type="text/javascript" src="strings.js"></script>
 </body>
