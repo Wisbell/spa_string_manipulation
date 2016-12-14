@@ -1,6 +1,5 @@
 
 function reversal(string) {
-    console.log("reversal function string", string)
 
     var reversed = []
 
@@ -17,7 +16,7 @@ Implement the logic in the alphabits function that return the characters in
 alphabetical order, and outputs the result in the DOM, below the text input.
 */
 function alphabits(string) {
-    console.log("alphabits function string", string)
+    //console.log("alphabits function string", string)
 
     var alphabits = []
 
@@ -39,6 +38,12 @@ string is a palindrome. If it is, display the text "Your string is a palidrome" 
 */
 function palindrome(string) {
     console.log("palindrome function string", string)
+
+    if(string === string.split('').reverse().join('')) {
+        document.querySelector('.palindrome').innerText = "Your string is a palindrome"
+    } else {
+        document.querySelector('.palindrome').innerHTML = `Your string is <b>NOT</b> a palindrome`
+    }
 
 }
 
