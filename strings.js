@@ -18,19 +18,11 @@ function reversal(string) {
 Implement the logic in the alphabits function that return the characters in
 alphabetical order, and outputs the result in the DOM, below the text input.
 */
+
 function alphabits(string) {
-    //console.log("alphabits function string", string)
 
-    var alphabits = []
-
-    // the lowest number from char code will be the first in the string
-    var lowest;
-
-    //
-    for(var i = 0; i < string.length; i++) {
-
-    }
-
+    string = string.split('').sort().join('')
+    document.querySelector('.alphabits').innerText = string
 
 }
 
